@@ -28,7 +28,7 @@ export default function Converter(){
             <Currency handleOnChange={busdOnChange} setErrors={setErrors} data={!isValueFromBase?data:data&&Math.round(data*3*100)/100} label="BUSD"/>
         </form>
 
-        <button onClick={onOpen}>Connect</button>
+        <button onClick={onOpen}>Show Wallet Details</button>
         <WalletModal onClose={onClose} isOpen={isOpen}/>
         </VStack>
     )

@@ -1,4 +1,3 @@
-import styles from "../styles/Modal.module.css";
 import { useEffect, useState } from "react";
 import {
   Modal,
@@ -41,8 +40,12 @@ export default function WalletModal({onClose,isOpen}){
           <ModalBody>
             <VStack>
                 {chainId?<Button bgColor="red" color='white' onClick={handleDisconnect}>Disconnect Wallet</Button>:<Button onClick={handleOnClick}>Connect to Metamask</Button>}
-                <Text>Chain Id : {chainId}</Text>
-                <Text>Balance : {balance+" ETH"}</Text>
+                {
+                  chainId&&<>
+                    <Text>Chain Id : {chainId}</Text>
+                    <Text>Balance : {balance&&balance+" ETH"}</Text>
+                  </>
+                }
             </VStack>
           </ModalBody>
         </ModalContent>
