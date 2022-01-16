@@ -1,4 +1,5 @@
 import styles from "../styles/Currency.module.css";
+import {Box, Input, VStack,FormControl,FormLabel} from "@chakra-ui/react"
 export default function Currency({handleOnChange,data,label,setErrors}){
 
     // function handleInputChange(event){
@@ -18,9 +19,16 @@ export default function Currency({handleOnChange,data,label,setErrors}){
 
     return (
         
-        <div className={styles.group}>
-            <label htmlFor="nep">{label} : </label>
-            <input className={styles.input} id='nep' onChange={handleOnChange} step={.01} type='number' value={data}></input>
-        </div>
+        // <div className={styles.group}>
+        //     <label htmlFor="nep">{label} : </label>
+        //     <input className={styles.input} id='nep' onChange={handleOnChange} step={.01} type='number' value={data}></input>
+        // </div>
+
+        <VStack>
+            <FormControl>
+                <FormLabel htmlFor={label.toLowerCase()}>{label+" : "}</FormLabel>
+                <Input id={label.toLowerCase()} type='number' onChange={handleOnChange} value={data}/>
+                </FormControl>
+        </VStack>
     )
 }
