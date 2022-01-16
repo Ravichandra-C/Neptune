@@ -85,12 +85,6 @@
   max-width: 300px;
 }
 
-.card:hover,
-.card:focus,
-.card:active {
-  color: #0070f3;
-  border-color: #0070f3;
-}
 
 .card h2 {
   margin: 0 0 1rem 0;
@@ -103,6 +97,10 @@
   line-height: 1.5;
 }
 
+.err{
+  background-color: rgb(131, 45, 18);
+  color: red;
+}
 .logo {
   height: 1em;
   margin-left: 0.5rem;
