@@ -1,5 +1,6 @@
 import Head from 'next/head'
 import Image from 'next/image'
+import {Box,VStack,Input,Heading} from "@chakra-ui/react"
 import Converter from "../components/Converter";
 import styles from '../styles/Home.module.css'
 export default function Home() {
@@ -16,28 +17,10 @@ export default function Home() {
           Assignment
         </h1>
 
-        <div className={styles.grid}>
-          <div className={styles.card}>
-            <h2>Converter &rarr;</h2>
-            <Converter/>
-          </div>
-
-         
-        </div>
+        <Box w='50%' mt='2' p={4} borderWidth={"1px"} borderRadius={'lg'} overflow={'hidden'}>
+          <Converter/>
+        </Box>
       </main>
-
-      <footer className={styles.footer}>
-        <a
-          href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Powered by{' '}
-          <span className={styles.logo}>
-            <Image src="/vercel.svg" alt="Vercel Logo" width={72} height={16} />
-          </span>
-        </a>
-      </footer>
     </div>
   )
 }
